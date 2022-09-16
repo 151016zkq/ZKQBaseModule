@@ -28,10 +28,44 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/151016zkq/ZKQBaseModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
 
-  s.source_files = 'ZKQBaseModule/Classes/**/*'
+  s.ios.deployment_target = '9.0'
+  s.requires_arc         = true
+  s.static_framework     = true
+  s.swift_version = '5.0'
+  s.xcconfig = {
+    'USER_HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/Public"/**'
+  }
+  s.default_subspec = 'core'
+  s.subspec 'core' do |c|
+    c.source_files = 'ZKQBaseModule/Classes/**/*'
+    
+#    c.resource =  ['ZKQBaseModule/Resources/*.*']
+#    c.vendored_frameworks = 'ZKQBaseModule/Lib/*.framework'
+#    c.vendored_libraries = 'ZKQBaseModule/Lib/*.*'
+    c.pod_target_xcconfig  = {
+      'ENABLE_BITCODE' => 'NO',
+      'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+      'GCC_PREPROCESSOR_DEFINITIONS' => 'SD_WEBP=1 MAS_SHORTHAND=1 MAS_SHORTHAND_GLOBALS=1',
+      'OTHER_SWIFT_FLAGS' => '$(inherited) -D COCOAPODS -enable-bridging-pch'
+    }
+    c.public_header_files = 'Pod/Classes/**/*.h'
+    #  base模块pch文件
+    c.prefix_header_contents = '#import "Defines.h"',
+    '#import "ColorMacros.h"'
+    
+    
+    c.dependency 'KakaJSON', '~> 1.1.2'
+    c.dependency 'Alamofire','~> 4.9.1'
+    c.dependency 'IQKeyboardManager'
+    c.dependency 'MJRefresh', '~> 3.7.5'
+    c.dependency 'CTMediator'
+    c.dependency 'MJExtension', '3.0.13'
+
+
+  end
   
+
   # s.resource_bundles = {
   #   'ZKQBaseModule' => ['ZKQBaseModule/Assets/*.png']
   # }
