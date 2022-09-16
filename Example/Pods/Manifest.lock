@@ -1,0 +1,53 @@
+PODS:
+  - Alamofire (4.9.1)
+  - CTMediator (46)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - IQKeyboardManager (6.5.10)
+  - KakaJSON (1.1.2)
+  - MJExtension (3.0.13)
+  - MJRefresh (3.7.5)
+  - ZKQBaseModule (0.1.0):
+    - ZKQBaseModule/core (= 0.1.0)
+  - ZKQBaseModule/core (0.1.0):
+    - Alamofire (~> 4.9.1)
+    - CTMediator
+    - IQKeyboardManager
+    - KakaJSON (~> 1.1.2)
+    - MJExtension (= 3.0.13)
+    - MJRefresh (~> 3.7.5)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - ZKQBaseModule (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CTMediator
+    - FBSnapshotTestCase
+    - IQKeyboardManager
+    - KakaJSON
+    - MJExtension
+    - MJRefresh
+
+EXTERNAL SOURCES:
+  ZKQBaseModule:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  CTMediator: f1cf58d509fb3192086c367711f039efd769b907
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  IQKeyboardManager: 45a1fa55c1a5b02c61ac0fd7fd5b62bb4ad20d97
+  KakaJSON: cc5ff50a8c1cfbb09413db8496cb709a209e6137
+  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  ZKQBaseModule: ebc0e63ab9703f14ba34cfe9f273f056261ef536
+
+PODFILE CHECKSUM: 12a53d3c32d1afd91acd4122b125547cc8a07e6e
+
+COCOAPODS: 1.11.3

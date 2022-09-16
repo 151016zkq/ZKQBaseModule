@@ -1,0 +1,6 @@
+framework module ZKQBaseModule {
+  umbrella header "ZKQBaseModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "ZKQBaseModule",
+  "version": "0.1.0",
+  "summary": "A short description of ZKQBaseModule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/151016zkq/ZKQBaseModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "151016zkq": "1510166838@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/151016zkq/ZKQBaseModule.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "requires_arc": true,
+  "static_framework": true,
+  "swift_versions": "5.0",
+  "xcconfig": {
+    "USER_HEADER_SEARCH_PATHS": "\"${PODS_ROOT}/Headers/Public\"/**"
+  },
+  "default_subspecs": "core",
+  "subspecs": [
+    {
+      "name": "core",
+      "source_files": "ZKQBaseModule/Classes/**/*",
+      "pod_target_xcconfig": {
+        "ENABLE_BITCODE": "NO",
+        "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES",
+        "GCC_PREPROCESSOR_DEFINITIONS": "SD_WEBP=1 MAS_SHORTHAND=1 MAS_SHORTHAND_GLOBALS=1",
+        "OTHER_SWIFT_FLAGS": "$(inherited) -D COCOAPODS -enable-bridging-pch"
+      },
+      "public_header_files": "Pod/Classes/**/*.h",
+      "prefix_header_contents": [
+        "#import \"Defines.h\"",
+        "#import \"ColorMacros.h\""
+      ],
+      "dependencies": {
+        "KakaJSON": [
+          "~> 1.1.2"
+        ],
+        "Alamofire": [
+          "~> 4.9.1"
+        ],
+        "IQKeyboardManager": [
+
+        ],
+        "MJRefresh": [
+          "~> 3.7.5"
+        ],
+        "CTMediator": [
+
+        ],
+        "MJExtension": [
+          "3.0.13"
+        ]
+      }
+    }
+  ],
+  "swift_version": "5.0"
+}

@@ -28,10 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		029B5DBEBBA112E48B0045CA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		029B5DBEBBA112E48B0045CA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		0B52650C6B137F2A2961514B /* Pods-ZKQBaseModule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKQBaseModule_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ZKQBaseModule_Tests/Pods-ZKQBaseModule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		24FB22B15CA8FB192610FFA6 /* Pods-ZKQBaseModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKQBaseModule_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZKQBaseModule_Tests/Pods-ZKQBaseModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2B014761F40B60832A9A2F57 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2B014761F40B60832A9A2F57 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3261A73A2E4D05E43A3229EE /* Pods_ZKQBaseModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZKQBaseModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E62690D45348369A701C8F7 /* Pods-ZKQBaseModule_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKQBaseModule_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZKQBaseModule_Example/Pods-ZKQBaseModule_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ZKQBaseModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKQBaseModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +45,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7A82CD126D6F5A4D3CEDDE55 /* Pods_ZKQBaseModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZKQBaseModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		81697BA381375A1342F7E3A5 /* ZKQBaseModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ZKQBaseModule.podspec; path = ../ZKQBaseModule.podspec; sourceTree = "<group>"; };
+		81697BA381375A1342F7E3A5 /* ZKQBaseModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ZKQBaseModule.podspec; path = ../ZKQBaseModule.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FF616C2130DDB99BE36745A6 /* Pods-ZKQBaseModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZKQBaseModule_Example.release.xcconfig"; path = "Target Support Files/Pods-ZKQBaseModule_Example/Pods-ZKQBaseModule_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,7 +86,6 @@
 				0B52650C6B137F2A2961514B /* Pods-ZKQBaseModule_Tests.debug.xcconfig */,
 				24FB22B15CA8FB192610FFA6 /* Pods-ZKQBaseModule_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,11 +292,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ZKQBaseModule_Example/Pods-ZKQBaseModule_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ZKQBaseModule/ZKQBaseModule.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/KakaJSON/KakaJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZKQBaseModule.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KakaJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
